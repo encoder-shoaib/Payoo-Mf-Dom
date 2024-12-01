@@ -1,16 +1,16 @@
 
 
-document.getElementById('add-money-btn').addEventListener('click',function(event){
+document.getElementById('cash-out-money-btn').addEventListener('click',function(event){
     // prevent page reload 
     event.preventDefault();
     console.log('yes this page is connected ')
 
     // take amount input 
-    const amount = document.getElementById('input-amount').value
+    const amount = document.getElementById('input-amount-cash-out').value
     console.log(amount)
     // amount= ' ';
 
-    const PinNumber = document.getElementById('pin-number').value
+    const PinNumber = document.getElementById('pin-number-cash-out').value
     console.log(PinNumber)
     // PinNumber =' ';
 
@@ -29,12 +29,12 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
 
         // convert amount text to number 
         const amountInteger = parseFloat(amount)
-        const amountConvertInteger = parseFloat(getPreviousAmount)
+        const previousAmountConvertInteger = parseFloat(getPreviousAmount)
 
 
 
         // calculate  total amount 
-        const totalAmount = amountInteger + amountConvertInteger ;
+        const totalAmount =   previousAmountConvertInteger - amountInteger ;
         console.log(totalAmount)
 
 
@@ -48,4 +48,3 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
     }
 
 })
-
