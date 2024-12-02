@@ -41,6 +41,19 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
         // amount set 
         document.getElementById('previous-amount').innerText = totalAmount;
 
+
+
+        // add a transaction history 
+        const p = document.createElement('p')
+        p.innerText = `Added : ${amountInteger} tk. New Balance : ${totalAmount}`
+        console.log(p)
+
+
+        // should be a common function 
+        // append in transaction container div 
+        
+        document.getElementById('transaction-container').appendChild(p);
+
         
     }
     else{
