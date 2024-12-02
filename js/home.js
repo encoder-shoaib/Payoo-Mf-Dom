@@ -15,6 +15,13 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
     // PinNumber =' ';
 
 
+    // amount validation 
+
+    if(isNaN(amount)){
+        alert('Failed add money!');
+        return ;
+    }
+
     if(PinNumber=='34'){
         console.log('successful login!!!!!!!!!!');
 
